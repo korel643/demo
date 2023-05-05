@@ -28,7 +28,7 @@ public class CustomerDTO {
 
     public static CustomerDTO of(TCustomer tCustomers) {
         CustomerDTO dto = new CustomerDTO();
-        dto.setId(dto.getId());
+        dto.setId(tCustomers.getId());
         dto.setCity(tCustomers.getCity());
         return dto;
     }
