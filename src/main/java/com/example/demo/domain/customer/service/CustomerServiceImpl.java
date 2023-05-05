@@ -29,7 +29,7 @@ public class CustomerServiceImpl implements CustomerService {
 
 
 
-    public CustomerDTO getCustomerById(Long idCustomer) {
+    public CustomerDTO getCustomerById(String idCustomer) {
         return customerDAO.getCustomerById(idCustomer)
                 .map((CustomerDTO::of))
                 .orElse(null);

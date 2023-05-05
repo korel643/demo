@@ -6,15 +6,15 @@ import java.util.Optional;
 
 public class CustomerDTO {
 
-    private Long id;
+    private String id;
 
     private String city;
 
-    public Long getId() {
+    public String getId() {
         return id;
     }
 
-    public void setId(Long id) {
+    public void setId(String id) {
         this.id = id;
     }
 
@@ -26,10 +26,10 @@ public class CustomerDTO {
         this.city = city;
     }
 
-    public static CustomerDTO of(TCustomer tCustomer) {
+    public static CustomerDTO of(TCustomer tCustomers) {
         CustomerDTO dto = new CustomerDTO();
-        dto.setId(tCustomer.getId());
-        dto.setCity(tCustomer.getCity());
+        dto.setId(dto.getId());
+        dto.setCity(tCustomers.getCity());
         return dto;
     }
 }

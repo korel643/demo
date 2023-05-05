@@ -11,16 +11,17 @@ public class TCustomer {
 
     @Id
     @Column(name = "CustomerID")
-    private Long id;
+    private String  id;
 
     @Column(name = "City")
     private String city;
 
-    public Long getId() {
+
+    public String getId() {
         return id;
     }
 
-    public void setId(Long id) {
+    public void setId(String id) {
         this.id = id;
     }
 

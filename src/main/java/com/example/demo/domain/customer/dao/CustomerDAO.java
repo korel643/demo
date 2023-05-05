@@ -14,7 +14,7 @@ public class CustomerDAO {
     @PersistenceContext
     EntityManager entityManager;
 
-    public Optional<TCustomer> getCustomerById(Long idCustomer) {
+    public Optional<TCustomer> getCustomerById(String idCustomer) {
         String sql = """
                 select t from TCustomer t where t.id = idCustomer""";
         TCustomer result;
