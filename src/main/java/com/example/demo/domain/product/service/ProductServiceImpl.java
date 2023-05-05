@@ -1,7 +1,8 @@
 package com.example.demo.domain.product.service;
 
+import com.example.demo.domain.product.dao.ProductDAO;
 import com.example.demo.domain.product.entity.TProduct;
-import com.example.demo.domain.product.repository.ProductsJpaRepository;
+import com.example.demo.domain.product.repository.ProductJpaRepository;
 import com.example.demo.domain.product.service.dto.ProductDTO;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
@@ -14,7 +15,10 @@ import java.util.stream.Collectors;
 public class ProductServiceImpl implements ProductService {
 
     @Autowired
-    private ProductsJpaRepository productsJpaRepository;
+    private ProductJpaRepository productsJpaRepository;
+
+    @Autowired
+    private ProductDAO productDAO;
 
 
     public Collection<ProductDTO> getAllProducts() {
