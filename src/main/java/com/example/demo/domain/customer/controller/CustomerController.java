@@ -1,5 +1,6 @@
 package com.example.demo.domain.customer.controller;
 
+import com.example.demo.domain.customer.service.CustomerService;
 import com.example.demo.domain.customer.service.dto.CustomerDTO;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -14,7 +15,7 @@ import java.util.Collection;
 public class CustomerController {
 
     @Autowired
-    private CustomerController customerService;
+    private CustomerService customerService;
 
     @GetMapping
     public Collection<CustomerDTO> getAllCustomers(){
