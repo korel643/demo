@@ -7,4 +7,6 @@ import java.util.Collection;
 public interface ProductService {
 
     Collection<ProductDTO> getAllProducts();
+
+    ProductDTO getProductById(Long idProduct);
 }

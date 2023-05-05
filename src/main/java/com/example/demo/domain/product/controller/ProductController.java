@@ -4,6 +4,7 @@ import com.example.demo.domain.product.service.ProductService;
 import com.example.demo.domain.product.service.dto.ProductDTO;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
@@ -14,11 +15,11 @@ import java.util.Collection;
 public class ProductController {
 
     @Autowired
-    private ProductService productsService;
+    private ProductService productService;
 
     @GetMapping
     public Collection<ProductDTO> getAllProducts(){
-        return productsService.getAllProducts();
+        return productService.getAllProducts();
     }
 
 

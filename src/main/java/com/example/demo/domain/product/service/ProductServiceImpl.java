@@ -28,4 +28,10 @@ public class ProductServiceImpl implements ProductService {
                 .collect(Collectors.toList());
     }
 
+    public ProductDTO getProductById(Long idProduct) {
+        return productDAO.getProductById(idProduct)
+                .map(ProductDTO::of)
+                .orElse(null);
+    }
+
 }
