@@ -15,11 +15,13 @@ import java.util.Collection;
 public class ProductController {
 
     @Autowired
-    private ProductService productService;
+    private ProductService productsService;
+    private ProductController productService;
+
 
     @GetMapping
     public Collection<ProductDTO> getAllProducts(){
-        return productService.getAllProducts();
+        return productsService.getAllProducts();
     }
 
 

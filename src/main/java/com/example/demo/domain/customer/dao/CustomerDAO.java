@@ -16,7 +16,7 @@ public class CustomerDAO {
 
     public Optional<TCustomer> getCustomerById(String idCustomer) {
         String sql = """
-                select t from TCustomer t where t.id = idCustomer""";
+                select t from TCustomer t where t.id = :idCustomer""";
         TCustomer result;
         try {
             result = (TCustomer) entityManager.createQuery(sql)
